@@ -10,7 +10,7 @@ import (
 )
 
 const (
-	dbSource = "postgresql://root:enterpi@localhost:5433/simple_bank?sslmode=disable"
+	dbSource = "postgresql://root:secret@localhost:5432/simple_bank?sslmode=disable"
 )
 
 var testStore Store
