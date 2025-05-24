@@ -1,8 +1,8 @@
 package api
 
 import (
-	"github.com/gin-gonic/gin"
 	db "github.com/akshay-xp/simplebank/db/sqlc"
+	"github.com/gin-gonic/gin"
 )
 
 // Server serves HTTP requests for out banking service.
@@ -19,6 +19,8 @@ func NewServer(store db.Store) *Server {
 	router.POST("/accounts", server.createAccount)
 	router.GET("/accounts/:id", server.getAccount)
 	router.GET("/accounts", server.listAccount)
+
+	router.POST("/transfers", server.createTransfer)
 
 	// add routes to router
 	server.router = router
