@@ -45,4 +45,7 @@ proto:
     --go-grpc_out=pb --go-grpc_opt=paths=source_relative \
     proto/*.proto
 
-.PHONY: postgres createdb dropdb migrateup migratedown migrateup1 migratedown1 db_docs db_schema slqc test server mock proto
+grpcui:
+	grpcui -plaintext 127.0.0.1:9090
+
+.PHONY: postgres createdb dropdb migrateup migratedown migrateup1 migratedown1 db_docs db_schema slqc test server mock proto grpcui
